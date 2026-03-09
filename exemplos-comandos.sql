@@ -20,7 +20,7 @@ alunos
 	WHERE
     	 data_nascimento >= '2010-01-01'
  ORDER BY nome;
- 
+
  --
 
 -- REMOVE REGISTROS
@@ -34,6 +34,21 @@ WHERE email = 'imercalli@example.org';
 
 SELECT * FROM alunos
 WHERE turma_id = 11;
+
+----
+
+SELECT COUNT(*)
+FROM alunos
+WHERE
+(
+  data_nascimento >= '2010-01-01' AND
+  data_nascimento < '2011-01-01'
+)
+OR
+(
+  data_nascimento >= '2007-01-01' AND
+  data_nascimento < '2008-01-01'
+);
 
 
 
